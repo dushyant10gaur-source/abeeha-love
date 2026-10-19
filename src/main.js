@@ -264,7 +264,7 @@ app.innerHTML = `
               <h4>Your little I-love-you</h4>
               <p>A voice note I never want to forget.</p>
               <audio controls preload="none">
-                <source src="/audio/voice1.mp3" type="audio/mpeg" />
+                <source src="./audio/voice1.mp3" type="audio/mpeg" />
                 Your browser does not support audio.
               </audio>
             </div>
@@ -276,7 +276,7 @@ app.innerHTML = `
               <h4>Your sweet words</h4>
               <p>One of those recordings I replay when I miss her.</p>
               <audio controls preload="none">
-                <source src="/audio/voice2.mp3" type="audio/mpeg" />
+                <source src="./audio/voice2.mp3" type="audio/mpeg" />
                 Your browser does not support audio.
               </audio>
             </div>
@@ -288,7 +288,7 @@ app.innerHTML = `
               <h4>My little comfort</h4>
               <p>For the days when the distance feels too big.</p>
               <audio controls preload="none">
-                <source src="/audio/voice3.mp3" type="audio/mpeg" />
+                <source src="./audio/voice3.mp3" type="audio/mpeg" />
                 Your browser does not support audio.
               </audio>
             </div>
@@ -649,7 +649,7 @@ app.innerHTML = `
 
       <span class="song-heart">♡</span>
       <audio class="song-audio" preload="none">
-        <source src="/music/heeriye.mp3" type="audio/mpeg">
+       <source src="./music/heeriye.mp3" type="audio/mpeg">
       </audio>
     </article>
 
@@ -664,7 +664,7 @@ app.innerHTML = `
 
       <span class="song-heart">♡</span>
       <audio class="song-audio" preload="none">
-        <source src="/music/those-eyes.mp3" type="audio/mpeg">
+ <source src="./music/those-eyes.mp3" type="audio/mpeg">
       </audio>
     </article>
 
@@ -679,7 +679,7 @@ app.innerHTML = `
 
       <span class="song-heart">♡</span>
       <audio class="song-audio" preload="none">
-        <source src="/music/apna-bana-le.mp3" type="audio/mpeg">
+        <source src="./music/apna-bana-le.mp3" type="audio/mpeg">
       </audio>
     </article>
 
@@ -695,7 +695,7 @@ app.innerHTML = `
   <span class="song-heart">♡</span>
 
   <audio class="song-audio" preload="none">
-    <source src="/music/until-i-found-you.mp3" type="audio/mpeg">
+    <source src="./music/until-i-found-you.mp3" type="audio/mpeg">
   </audio>
 </article>
 
@@ -920,7 +920,9 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 })
 
 // Click-to-play romantic soundtrack 🎵
-
+document.querySelectorAll('.song-audio').forEach((audio) => {
+  audio.volume = 0.8
+})
 const songCards = document.querySelectorAll('.song-card')
 const songStatus = document.querySelector('#song-status')
 
